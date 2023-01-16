@@ -1,7 +1,9 @@
 # GAMES101
-> This is an archive for homework in course GAMES101.
+This is an archive for homework in course GAMES101.
 
-## Homework 1
+<details id=1>
+<summary><h2>Homework 1</h2></summary>
+
 ### Running command
 ```bash
 ./Rasterizer                    #Rotating around z-axis (by default)
@@ -29,3 +31,5 @@ Rotating around x-axis
 
 Rotating around y-axis
 ![advance-y](./images/homework1-advance-y.gif)
+
+</details>
