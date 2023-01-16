@@ -4,28 +4,28 @@
 ## Homework 1
 ### Running command
 ```bash
-./Rasterizer                    #Turning around z-axis (by default)
+./Rasterizer                    #Rotating around z-axis (by default)
 
-./Rasterizer -x                 #Turning around x-axis
+./Rasterizer -x                 #Rotating around x-axis
 
-./Rasterizer -y                 #Turning around y-axis
+./Rasterizer -y                 #Rotating around y-axis
 
-./Rasterizer -r 20              #Turning the triangle around z-axis by 20 degree
+./Rasterizer -r 20              #Rotating the triangle around z-axis by 20 degree
                                 #save it to output.png
 
-./Rasterizer -r 20 image.png    #Turning the triangle around z-axis by 20 degree
+./Rasterizer -r 20 image.png    #Rotating the triangle around z-axis by 20 degree
                                 #save it to image.png
 
-./Rasterizer -r 20 -x image.png #Turning the triangle around x-axis by 20 degree
+./Rasterizer -r 20 -x image.png #Rotating the triangle around x-axis by 20 degree
                                 #save it to image.png
 ```
 ### Basic
-Turning around z-axis
+Rotating around z-axis
 ![basic](./images/homework1-basic.gif)
 
 ### Advance
-Turning around x-axis
+Rotating around x-axis
 ![advance-x](images/homework1-advance-x.gif)
 
-Turning around y-axis
+Rotating around y-axis
 ![advance-y](./images/homework1-advance-y.gif)
