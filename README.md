@@ -3,7 +3,7 @@ This is an archive for homework in course GAMES101.
 ## Development Environment
 - Hardware
   - Device: MacBook Pro 2021 14''
-  - CPU: M1 Pro (8 cores)
+  - Silicon: M1 Pro (8 cores CPU + 14 cores GPU)
   - System: macOS Ventura 13.1
 - Software
   - Homebrew: v3.6.18
