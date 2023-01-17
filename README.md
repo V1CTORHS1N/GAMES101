@@ -1,6 +1,6 @@
 # GAMES101
 This is an archive for homework in course GAMES101.
-## Developing Environment
+## Development Environment
 - Hardware
   - Device: MacBook Pro 2021 14''
   - CPU: M1 Pro (8 cores)
