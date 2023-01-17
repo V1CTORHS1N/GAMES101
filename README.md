@@ -1,5 +1,5 @@
 # GAMES101
-This is an archive for homework in course GAMES101.
+Course Homework for GAMES101.
 ## Development Environment
 - Hardware
   - Device: MacBook Pro 2021 14''
