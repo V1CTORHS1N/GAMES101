@@ -23,13 +23,13 @@ This is an archive for homework in course GAMES101.
 ./Rasterizer -y                 #Rotating around y-axis
 
 ./Rasterizer -r 20              #Rotating the triangle around z-axis by 20 degree
-                                #save it to output.png
+                                #Save it to output.png
 
 ./Rasterizer -r 20 image.png    #Rotating the triangle around z-axis by 20 degree
-                                #save it to image.png
+                                #Save it to image.png
 
 ./Rasterizer -r 20 -x image.png #Rotating the triangle around x-axis by 20 degree
-                                #save it to image.png
+                                #Save it to image.png
 ```
 ### Basic
 Rotating around z-axis
