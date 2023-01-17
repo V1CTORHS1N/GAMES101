@@ -14,7 +14,7 @@ This is an archive for homework in course GAMES101.
 <details id=1>
 <summary><h2>Homework 1</h2></summary>
 
-### Running command
+### Commands
 ```bash
 ./Rasterizer                    #Rotating around z-axis (by default)
 
