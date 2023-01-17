@@ -1,45 +1,15 @@
 # GAMES101
 This is an archive for homework in course GAMES101.
-
-<table width=50%>
-    <tr align="center">
-        <th colspan="2">Hardware</th>
-    </tr>
-    <tr align="center">
-        <td>Device</td>
-        <td>MacBook Pro 2021 14''</td>
-    </tr>
-    <tr align="center">
-        <td>CPU</td>
-        <td>M1 Pro (8 cores)</td>
-    </tr>
-    <tr align="center">
-        <td>System</td>
-        <td>macOS Ventura 13.1</td>
-    </tr>
-</table>
-
-<table width=50%>
-    <tr align="center">
-        <th colspan="2">Software</th>
-    </tr>
-    <tr align="center">
-        <td>Homebrew</td>
-        <td>v3.6.18</td>
-    </tr>
-    <tr align="center">
-        <td>CMake</td>
-        <td>v3.25.1</td>
-    </tr>
-    <tr align="center">
-        <td>OpenCV</td>
-        <td>v4.7.0</td>
-    </tr>
-    <tr align="center">
-        <td>Eigen</td>
-        <td>v3.40_1</td>
-    </tr>
-</table>
+## Developing Environment
+- Hardware
+  - Device: MacBook Pro 2021 14''
+  - CPU: M1 Pro (8 cores)
+  - System: macOS Ventura 13.1
+- Software
+  - Homebrew: v3.6.18
+  - CMake: v3.25.1
+  - OpenCV: v4.7.0
+  - Eigen: v3.40_1
 
 <details id=1>
 <summary><h2>Homework 1</h2></summary>
