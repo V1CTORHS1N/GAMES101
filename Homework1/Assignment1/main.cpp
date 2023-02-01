@@ -108,7 +108,7 @@ Eigen::Matrix4f get_projection_matrix(float eye_fov, float aspect_ratio,
 
     /*
     @author: Weitao Xin
-    @date: 2023-01-16
+    @date: 2023-02-01
     @brief: Perspective Projection Matrix
     @details:
     
@@ -121,7 +121,7 @@ Eigen::Matrix4f get_projection_matrix(float eye_fov, float aspect_ratio,
     */
 
     float t = -tanh(DEG2RAD(eye_fov) / 2) * abs(zNear);
-    float r = t / aspect_ratio;
+    float r = t * aspect_ratio;
 
     projection(0, 0) = zNear / r;
     projection(1, 1) = zNear / t;
