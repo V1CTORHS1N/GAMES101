@@ -4,11 +4,11 @@ Course Homework for GAMES101.
 - Hardware
   - Device: MacBook Pro 2021 14''
   - SoC: M1 Pro (8 cores CPU + 14 cores GPU)
-  - System: macOS Ventura 13.1
+  - System: macOS Ventura 13.2
 - Software
   - Homebrew: v3.6.18
-  - CMake: v3.25.1
-  - OpenCV: v4.7.0
+  - CMake: v3.25.2
+  - OpenCV: v4.7.0_1
   - Eigen: v3.40_1
 
 <details id=1>
@@ -35,11 +35,19 @@ Course Homework for GAMES101.
 Rotating around z-axis
 ![basic](./images/homework1-basic.gif)
 
-### Advance
+### Bonus
 Rotating around x-axis
-![advance-x](images/homework1-advance-x.gif)
+![bonus-x](images/homework1-bonus-x.gif)
 
 Rotating around y-axis
-![advance-y](./images/homework1-advance-y.gif)
+![bonus-y](./images/homework1-bonus-y.gif)
+
+</details>
+
+<details id=2>
+<summary><h2>Homework 2</h2></summary>
+
+### Basic
+![basic](./images/homework2-basic.png)
 
 </details>

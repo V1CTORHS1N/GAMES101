@@ -7,6 +7,11 @@
 
 constexpr double MY_PI = 3.1415926;
 
+float DEG2RAD(float deg)
+{
+    return deg * MY_PI/180;
+}
+
 Eigen::Matrix4f get_view_matrix(Eigen::Vector3f eye_pos)
 {
     Eigen::Matrix4f view = Eigen::Matrix4f::Identity();
@@ -31,7 +36,30 @@ Eigen::Matrix4f get_model_matrix(float rotation_angle)
 Eigen::Matrix4f get_projection_matrix(float eye_fov, float aspect_ratio, float zNear, float zFar)
 {
     // TODO: Copy-paste your implementation from the previous assignment.
-    Eigen::Matrix4f projection;
+    Eigen::Matrix4f projection = Eigen::Matrix4f::Identity();
+
+    /*
+    @author: Weitao Xin
+    @date: 2023-02-01
+    @brief: Perspective Projection Matrix
+    @details:
+    
+    [
+        [ n/r,          0,            0,            0      ],
+        [  0,          n/t,           0,            0      ],
+        [  0,           0,       (n+f)/(n-f),   -2nf/(n-f) ],
+        [  0,           0,            1,            0      ]
+    ]
+    */
+
+    float t = -tan(DEG2RAD(eye_fov / 2)) * abs(zNear);
+    float r = t * aspect_ratio;
+
+    projection(0, 0) = zNear / r;
+    projection(1, 1) = zNear / t;
+    projection(2, 2) = (zNear + zFar) / (zNear - zFar);
+    projection(2, 3) = -2 * zNear * zFar / (zNear - zFar);
+    projection(3, 2) = 1;
 
     return projection;
 }
@@ -51,7 +79,6 @@ int main(int argc, const char** argv)
     rst::rasterizer r(700, 700);
 
     Eigen::Vector3f eye_pos = {0,0,5};
-
 
     std::vector<Eigen::Vector3f> pos
             {
@@ -99,7 +126,7 @@ int main(int argc, const char** argv)
         image.convertTo(image, CV_8UC3, 1.0f);
         cv::cvtColor(image, image, cv::COLOR_RGB2BGR);
 
-        cv::imwrite(filename, image);
+        cv::imwrite("output.png", image);
 
         return 0;
     }
@@ -120,7 +147,8 @@ int main(int argc, const char** argv)
         cv::imshow("image", image);
         key = cv::waitKey(10);
 
-        std::cout << "frame count: " << frame_count++ << '\n';
+        std::cout << "frame count: " << frame_count++ << '\r';
+        fflush(stdout);
     }
 
     return 0;
