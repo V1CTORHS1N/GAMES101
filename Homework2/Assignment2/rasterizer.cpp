@@ -137,8 +137,8 @@ void rst::rasterizer::rasterize_triangle(const Triangle& t) {
     /*
     @author: Weitao Xin
     @date: 2023-02-01
-    @brief: Find out the bounding box of current triangle and render the pixels
-            inside the triangle with given color.
+    @brief: - Find out the bounding box of current triangle.
+            - Render the pixels inside the triangle with given color.
 
     */
 
