@@ -64,17 +64,31 @@ Eigen::Matrix4f get_projection_matrix(float eye_fov, float aspect_ratio, float z
     return projection;
 }
 
-int main(int argc, const char** argv)
-{
+int main(int argc, const char** argv) {
     float angle = 0;
     bool command_line = false;
+    bool MSAA = false;
     std::string filename = "output.png";
 
-    if (argc == 2)
-    {
+    if (argc >= 3) {
         command_line = true;
-        filename = std::string(argv[1]);
+        if (!strcmp(argv[1], "-MSAA") && !strcmp(argv[2], "-s")) {
+            MSAA = true;
+            filename = argv[3] != NULL ? std::string(argv[3]) : filename;
+        } else if (!strcmp(argv[1], "-s")) {
+            filename = argv[argc - 1] != NULL ? argv[argc - 1] : filename;
+        }
+    } else if (argc >= 2) {
+        if (argc == 2) {
+            if (!strcmp(argv[1], "-MSAA")) {
+                MSAA = true;
+                command_line = false;
+            } else if (!strcmp(argv[1], "-s")) {
+                command_line = true;
+            }
+        }
     }
+
 
     rst::rasterizer r(700, 700);
 
@@ -121,12 +135,12 @@ int main(int argc, const char** argv)
         r.set_view(get_view_matrix(eye_pos));
         r.set_projection(get_projection_matrix(45, 1, 0.1, 50));
 
-        r.draw(pos_id, ind_id, col_id, rst::Primitive::Triangle);
+        r.draw(pos_id, ind_id, col_id, rst::Primitive::Triangle, MSAA);
         cv::Mat image(700, 700, CV_32FC3, r.frame_buffer().data());
         image.convertTo(image, CV_8UC3, 1.0f);
         cv::cvtColor(image, image, cv::COLOR_RGB2BGR);
 
-        cv::imwrite("output.png", image);
+        cv::imwrite(filename, image);
 
         return 0;
     }
@@ -139,7 +153,7 @@ int main(int argc, const char** argv)
         r.set_view(get_view_matrix(eye_pos));
         r.set_projection(get_projection_matrix(45, 1, 0.1, 50));
 
-        r.draw(pos_id, ind_id, col_id, rst::Primitive::Triangle);
+        r.draw(pos_id, ind_id, col_id, rst::Primitive::Triangle, MSAA);
 
         cv::Mat image(700, 700, CV_32FC3, r.frame_buffer().data());
         image.convertTo(image, CV_8UC3, 1.0f);

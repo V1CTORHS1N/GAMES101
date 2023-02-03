@@ -70,14 +70,31 @@ namespace rst
 
         void clear(Buffers buff);
 
-        void draw(pos_buf_id pos_buffer, ind_buf_id ind_buffer, col_buf_id col_buffer, Primitive type);
+        /*
+        @author: Weitao Xin
+        @date: 2023-02-03
+        @brief: MSAA support.
+        @details:
+                From: void draw(pos_buf_id pos_buffer, ind_buf_id ind_buffer, col_buf_id col_buffer, Primitive type) 
+                To:   void draw(pos_buf_id pos_buffer, ind_buf_id ind_buffer, col_buf_id col_buffer, Primitive type, bool MSAA)
+        */
+        void draw(pos_buf_id pos_buffer, ind_buf_id ind_buffer, col_buf_id col_buffer, Primitive type, bool MSAA);
 
         std::vector<Eigen::Vector3f>& frame_buffer() { return frame_buf; }
 
     private:
         void draw_line(Eigen::Vector3f begin, Eigen::Vector3f end);
 
-        void rasterize_triangle(const Triangle& t);
+        /*
+        @author: Weitao Xin
+        @date: 2023-02-03
+        @brief: MSAA support.
+        @details:
+                From: void rasterize_triangle(const Triangle& t) 
+                To:   void rasterize_triangle(const Triangle& t, bool MSAA)
+        */
+
+        void rasterize_triangle(const Triangle& t, bool MSAA);
 
         // VERTEX SHADER -> MVP -> Clipping -> /.W -> VIEWPORT -> DRAWLINE/DRAWTRI -> FRAGSHADER
 
@@ -99,5 +116,16 @@ namespace rst
 
         int next_id = 0;
         int get_next_id() { return next_id++; }
+
+        /*
+        @author: Weitao Xin
+        @date: 2023-02-02
+        @brief: Buffers for MSAA.
+        @details: - std::vector<Eigen::Vector3f> sample_frame_buf;
+                  - std::vector<float> sample_depth_buf;
+        */
+
+       std::vector<Eigen::Vector3f> sample_frame_buf;
+       std::vector<float> sample_depth_buf;
     };
 }

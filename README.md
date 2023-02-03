@@ -47,7 +47,28 @@ Rotating around y-axis
 <details id=2>
 <summary><h2>Homework 2</h2></summary>
 
+### Commands
+```bash
+./Rasterizer                        #Rendering triangle without MSAA (by default)
+
+./Rasterizer -MSAA                  #Rendering triangle with MSAA
+
+./Rasterizer -s                     #Save rendering result (no MSAA) to ./output.png
+
+./Raserizer -s filename.png         #Save rendering result (no MSAA) to ./filename.png
+
+./Rasterizer -MSAA -s               #Save rendering result (MSAA) to ./output.png
+
+./Rasterizer -MSAA -s filename.png  #Save rendering result (MSAA) to ./filename.png
+```
 ### Basic
 ![basic](./images/homework2-basic.png)
+
+### Bonus
+No MSAA
+![bonus-no-MSAA](./images/homework2-bonus-origin.jpg)
+
+MSAA
+![bonus-MSAA](./images/homework2-bonus-msaa.jpg)
 
 </details>
