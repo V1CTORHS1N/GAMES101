@@ -77,6 +77,9 @@ int main(int argc, const char** argv) {
             filename = argv[3] != NULL ? std::string(argv[3]) : filename;
         } else if (!strcmp(argv[1], "-s")) {
             filename = argv[argc - 1] != NULL ? argv[argc - 1] : filename;
+        } else {
+            std::cout << "Command Not Found!" << std::endl;
+            exit(0);
         }
     } else if (argc >= 2) {
         if (argc == 2) {
@@ -85,6 +88,9 @@ int main(int argc, const char** argv) {
                 command_line = false;
             } else if (!strcmp(argv[1], "-s")) {
                 command_line = true;
+            } else {
+                std::cout << "Command Not Found!" << std::endl;
+                exit(0);
             }
         }
     }
