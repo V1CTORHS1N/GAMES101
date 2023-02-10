@@ -1,5 +1,5 @@
 # GAMES101
-Course Homework for GAMES101.
+Course Homework for [GAMES101](https://sites.cs.ucsb.edu/~lingqi/teaching/games101.html).
 ## Development Environment
 - Hardware
   - Device: MacBook Pro 2021 14''
