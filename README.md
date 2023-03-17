@@ -32,14 +32,14 @@ Course Homework for [GAMES101](https://sites.cs.ucsb.edu/~lingqi/teaching/games1
                                 #Save it to image.png
 ```
 ### Basic
-Rotating around z-axis
+#### Rotating around z-axis
 ![basic](./images/homework1-basic.gif)
 
 ### Bonus
-Rotating around x-axis
+#### Rotating around x-axis
 ![bonus-x](images/homework1-bonus-x.gif)
 
-Rotating around y-axis
+#### Rotating around y-axis
 ![bonus-y](./images/homework1-bonus-y.gif)
 
 </details>
@@ -65,10 +65,30 @@ Rotating around y-axis
 ![basic](./images/homework2-basic.png)
 
 ### Bonus
-No MSAA
+#### No MSAA
 ![bonus-no-MSAA](./images/homework2-bonus-origin.jpg)
 
-MSAA
+#### MSAA
 ![bonus-MSAA](./images/homework2-bonus-msaa.jpg)
 
+</details>
+
+<details id = 3>
+<summary><h2>Homework 3</h2></summary>
+
+### Basic
+#### Normal Shader
+![normal](./images/homework3-basic-normal.gif)
+
+#### Phong Shader
+![phong](./images/homework3-basic-phong.gif)
+
+#### Texture Shader
+![texture](./images/homework3-basic-texture.gif)
+
+#### Bump Shader
+![bump](./images/homework3-basic-bump.gif)
+
+#### Displacement Shader
+![displacement](./images/homework3-basic-displacement.gif)
 </details>
